@@ -1,0 +1,15 @@
+<div *ngFor="let header of leftpaneHeader">
+    <nav *ngIf="header.show" class="navbar navbar-expand-md bg-dark navbar-dark" (click)="onToggleHeaders(header.id)">
+        <a class="navbar-brand" href="#">{{header.headerName}}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#abv">
+          <span class="navbar-toggler-icon"></span>
+  </button>
+        <div class="collapse navbar-collapse" id="abv">
+            <ul class="navbar-nav">
+                <li *ngFor="let data of header.data" class="nav-item">
+                    <a class="nav-link" href="#">{{data}}</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
