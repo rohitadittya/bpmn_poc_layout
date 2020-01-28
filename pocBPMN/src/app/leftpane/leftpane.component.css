@@ -13,6 +13,8 @@
     display: flex;
     align-items: stretch;
     background-color: #f1f1f1;
+    border-radius: 0px;
+    padding: 6px;
 }
 
 
@@ -28,6 +30,7 @@ font-size: 30px;
     border: none;
     overflow: hidden;
     outline: none;
+    width: 110px;
 }
 
 .btn.focus,
