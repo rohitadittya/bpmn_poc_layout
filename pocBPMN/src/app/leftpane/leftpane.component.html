@@ -1,15 +1,48 @@
-<div *ngFor="let header of leftpaneHeader">
-    <nav *ngIf="header.show" class="navbar navbar-expand-md bg-dark navbar-dark" (click)="onToggleHeaders(header.id)">
-        <a class="navbar-brand" href="#">{{header.headerName}}</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#abv">
-          <span class="navbar-toggler-icon"></span>
-  </button>
-        <div class="collapse navbar-collapse" id="abv">
-            <ul class="navbar-nav">
-                <li *ngFor="let data of header.data" class="nav-item">
-                    <a class="nav-link" href="#">{{data}}</a>
-                </li>
-            </ul>
+<div id="leftpaneAccordian">
+    <div class="card" *ngFor="let header of leftpaneHeader;let i = index">
+        <div class="flex-container " *ngIf="header.show">
+
+            <button class="btn" type="button" data-toggle="collapse" [attr.data-target]="'#' + header.id" style="flex-grow:11">
+                    <!-- <i class='fas fa-caret-right'> </i> -->
+                    {{header.headerName}}
+                </button>
+
+            <i class="material-icons" style="cursor: pointer;flex-grow: 1;margin: auto;" (click)="onToggleHeaders(header.id)">close</i>
+
+            <!-- <h2>
+                <button class="btn btn-secondary" type="button" data-toggle="collapse"
+                    [attr.data-target]="'#' + header.id">
+                    <i class='fas fa-caret-right'> </i>
+            {{header.headerName}}
+            </button>
+            <i class="material-icons" style="cursor: pointer;" (click)="onToggleHeaders(header.id)">close</i>
+            </h2> -->
         </div>
-    </nav>
+
+        <div id={{header.id}} class="collapse" *ngIf="header.show">
+            <div class="card-body">
+                <ul class="navbar-nav">
+                    <li *ngFor="let data of header.data" class="nav-item">
+                        <a class="nav-link" href="#">{{data}} </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- <div *ngFor="let header of leftpaneHeader;let i = index">
+                <nav *ngIf="header.show" class="navbar  bg-dark navbar-dark">
+                    <a class="navbar-brand" href="#">{{header.headerName}}</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=#i>
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id=i>
+                        <ul class="navbar-nav">
+                            <li *ngFor="let data of header.data" class="nav-item">
+                                <a class="nav-link" href="#">{{data}} </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div> -->

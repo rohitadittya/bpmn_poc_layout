@@ -1,0 +1,37 @@
+@media (max-width: 596px) {
+    #leftpaneAccordian {
+        display: none;
+    }
+}
+
+#leftpaneAccordian {
+    height: 100vh;
+    background-color: #f1f1f1;
+}
+
+.flex-container {
+    display: flex;
+    align-items: stretch;
+    background-color: #f1f1f1;
+}
+
+
+/* .flex-container>div {
+color: rgb(12, 12, 12);
+line-height: 2px;
+font-size: 30px;
+} */
+
+.btn {
+    color: black;
+    background-color: Transparent;
+    border: none;
+    overflow: hidden;
+    outline: none;
+}
+
+.btn.focus,
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
