@@ -1,4 +1,12 @@
-@media (max-width: 596px) {
+/* background-color: rgba(74, 88, 104, 0.479); for main center page*/
+
+
+/*  */
+
+
+/*  */
+
+@media (max-width: 650px) {
     #leftpaneAccordian {
         display: none;
     }
@@ -6,13 +14,14 @@
 
 #leftpaneAccordian {
     height: 100vh;
-    background-color: #f1f1f1;
+    background-color: rgba(212, 216, 224, 0.664);
+    max-width: 600px;
 }
 
 .flex-container {
     display: flex;
     align-items: stretch;
-    background-color: #f1f1f1;
+    background-color: rgba(212, 216, 224, 0.664);
     border-radius: 0px;
     padding: 6px;
 }
@@ -24,12 +33,19 @@ line-height: 2px;
 font-size: 30px;
 } */
 
+.card {
+    background-color: Transparent;
+    border-radius: 0px;
+}
+
 .btn {
-    color: black;
+    color: rgb(100, 100, 100);
     background-color: Transparent;
     border: none;
     overflow: hidden;
     outline: none;
+    font-weight: 500;
+    font-size: 14px;
     width: 110px;
 }
 

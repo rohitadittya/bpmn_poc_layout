@@ -12,6 +12,7 @@ export class LeftpaneService {
     new LeftpaneHeader('h3', 'Containers', ['A', 'B', 'C', 'D'], true),
     new LeftpaneHeader('h4', 'Shapes', ['Square', 'Circle', 'Rectangle', 'Triangle'], true),
   ];
+ 
 
   leftpaneHeaderChanged = new Subject<LeftpaneHeader[]>();
 
@@ -28,7 +29,6 @@ export class LeftpaneService {
         h.show = !h.show
       }
     })
-
     this.leftpaneHeaderChanged.next(this.leftpaneHeader.slice())
   }
 

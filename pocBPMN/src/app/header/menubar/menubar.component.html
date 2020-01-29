@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <a class="navbar-brand">LOGO</a>
+<nav class="navbar navbar-expand-sm bg-dark  ">
+    <a class="navbar-brand" style="color: white;">LOGO</a>
 
     <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link">File</a></li>
@@ -10,12 +10,12 @@
                 <a class="dropdown-item">Zoom Out</a>
                 <a class="dropdown-item">Guides</a>
                 <a class="dropdown-item">Grid</a>
-                <a class="dropdown-item" id="shapesDropdown" data-toggle="dropdown">Shapes <i class="fas fa-caret-right"></i></a>
+                <a class="dropdown-item" id="shapesDropdown" data-toggle="dropdown">Shapes <i class="fas fa-caret-right float-right right_submenu_icon"></i></a>
 
                 <div class="dropdown-menu dropdown-submenu">
                     <a *ngFor="let leftHeaders of leftpaneHeader" class="dropdown-item" (click)="onToggleLeftHeaders(leftHeaders.id)">
                         {{leftHeaders.headerName}}
-                        <i class='material-icons check' *ngIf="leftHeaders.show">check</i>
+                        <i class='material-icons check_icon' *ngIf="leftHeaders.show">check</i>
                     </a>
                 </div>
             </div>
@@ -28,12 +28,12 @@
             <div class="dropdown-menu">
                 <a class="dropdown-item">Zoom In</a>
                 <a class="dropdown-item">Zoom Out</a>
-                <a class="dropdown-item" id="AgainshapesDropdown" data-toggle="dropdown">Again Shapes <i class="fas fa-caret-right"></i></a>
+                <a class="dropdown-item" id="AgainshapesDropdown" data-toggle="dropdown">Again Shapes <i class="fas fa-caret-right float-right right_submenu_icon"></i></a>
 
                 <div class="dropdown-menu dropdown-submenu">
                     <a *ngFor="let leftHeaders of leftpaneHeader" class="dropdown-item" (click)="onToggleLeftHeaders(leftHeaders.id)">
                         {{leftHeaders.headerName}}
-                        <i class='material-icons check' *ngIf="leftHeaders.show">check</i>
+                        <i class='material-icons check_icon' *ngIf="leftHeaders.show">check</i>
                     </a>
                 </div>
             </div>

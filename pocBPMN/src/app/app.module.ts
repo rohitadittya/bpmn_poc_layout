@@ -5,16 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LeftpaneComponent } from './leftpane/leftpane.component';
 import { MenubarComponent } from './header/menubar/menubar.component';
+import { AngularDraggableModule } from 'angular2-draggable';
+import { RightpaneComponent } from './rightpane/rightpane.component';
+import { WorkareaCanvasComponent } from './workarea-canvas/workarea-canvas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LeftpaneComponent,
-    MenubarComponent
+    MenubarComponent,
+    RightpaneComponent,
+    WorkareaCanvasComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularDraggableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
