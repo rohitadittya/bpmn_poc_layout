@@ -1,7 +1,8 @@
-<div id="rightpane" class="rightpane">
-    <a>close X</a>
+<div id="rightpane" class="rightpane" #rightpane>
+    <button class="btn btn-danger openbtn" *ngIf="show" (click)="openNav()"><i class='fas fa-angle-double-left'></i></button>
+    <button class=" btn btn-danger closebtn" *ngIf="!show" (click)="closeNav()"><i class='fas fa-angle-double-right'></i></button>
     <a>SAMPLE</a>
-    <a>woRKING</a>
-    <a>GoOD</a>
+    <a>BPMN</a>
+    <a>LUCID CHART</a>
     <a>RIGHTPANE</a>
 </div>

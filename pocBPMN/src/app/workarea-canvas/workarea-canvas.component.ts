@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-workarea-canvas',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkareaCanvasComponent implements OnInit {
 
+  @ViewChild('workarea') workarea:ElementRef;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onResizeWorkarea(width:String){
+    console.log("called")
+    this.workarea.nativeElement.style.marginRight=width
   }
 
 }

@@ -4,8 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LeftpaneComponent } from './leftpane/leftpane.component';
-import { MenubarComponent } from './header/menubar/menubar.component';
-import { AngularDraggableModule } from 'angular2-draggable';
+import { MenubarComponent } from './header/menubar/menubar.component'; 
 import { RightpaneComponent } from './rightpane/rightpane.component';
 import { WorkareaCanvasComponent } from './workarea-canvas/workarea-canvas.component';
 
@@ -19,8 +18,7 @@ import { WorkareaCanvasComponent } from './workarea-canvas/workarea-canvas.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    AngularDraggableModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

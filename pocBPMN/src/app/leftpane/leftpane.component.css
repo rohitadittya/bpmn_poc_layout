@@ -1,12 +1,4 @@
-/* background-color: rgba(74, 88, 104, 0.479); for main center page*/
-
-
-/*  */
-
-
-/*  */
-
-@media (max-width: 650px) {
+@media (max-width: 800px) {
     #leftpaneAccordian {
         display: none;
     }
@@ -16,6 +8,7 @@
     height: 100vh;
     background-color: rgba(212, 216, 224, 0.664);
     max-width: 600px;
+    position: relative;
 }
 
 .flex-container {
