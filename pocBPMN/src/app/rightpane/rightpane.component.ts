@@ -18,12 +18,12 @@ export class RightpaneComponent implements OnInit {
 
   openNav() {
     this.rightpane.nativeElement.style.width = '200px'
-    this.workarea.onResizeWorkarea('210px')
+    this.workarea.onResizeRightpane('210px')
     this.show = false
   }
   closeNav() {
     this.rightpane.nativeElement.style.width = '20px'
-    this.workarea.onResizeWorkarea('30px')
+    this.workarea.onResizeRightpane('30px')
     this.show = true
   }
 }

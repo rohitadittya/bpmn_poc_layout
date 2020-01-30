@@ -1,5 +1,14 @@
 <app-menubar></app-menubar>
 <div class="row">
+    <div class="col-12" style="background-color:rgba(75, 89, 104, 0.753);height: 100vh;">
+        <app-leftpane [workarea]='workarea'></app-leftpane>
+        <app-workarea-canvas #workarea></app-workarea-canvas>
+        <app-rightpane [workarea]='workarea'></app-rightpane>
+    </div>
+</div>
+
+<!-- <app-menubar></app-menubar>
+<div class="row">
     <div class="col-2">
         <app-leftpane></app-leftpane>
     </div>
@@ -7,4 +16,4 @@
         <app-workarea-canvas #workarea></app-workarea-canvas>
         <app-rightpane [workarea]='workarea'></app-rightpane>
     </div>
-</div>
+</div> -->

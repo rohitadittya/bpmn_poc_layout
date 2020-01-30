@@ -1,22 +1,14 @@
-<div id="leftpaneAccordian">
+<div id="leftpaneAccordian" #leftpane (mousemove)="onResizeRightpane()">
+    <div class="resizeDrawer"></div>
     <div class="card" *ngFor="let header of leftpaneHeader;let i = index">
         <div class="flex-container " *ngIf="header.show">
 
             <button class="btn" type="button" data-toggle="collapse" [attr.data-target]="'#' + header.id" style="flex-grow:11">
-                    <!-- <i class='fas fa-caret-right'> </i> -->
                     {{header.headerName}}
                 </button>
 
             <i class="material-icons" style="cursor: pointer;flex-grow: 1;margin: auto;font-size: 17px;" (click)="onToggleHeaders(header.id)">close</i>
 
-            <!-- <h2>
-                <button class="btn btn-secondary" type="button" data-toggle="collapse"
-                    [attr.data-target]="'#' + header.id">
-                    <i class='fas fa-caret-right'> </i>
-            {{header.headerName}}
-            </button>
-            <i class="material-icons" style="cursor: pointer;" (click)="onToggleHeaders(header.id)">close</i>
-            </h2> -->
         </div>
 
         <div id={{header.id}} class="collapse" *ngIf="header.show">
@@ -30,7 +22,6 @@
         </div>
     </div>
 </div>
-
 
 
 <!-- <div *ngFor="let header of leftpaneHeader;let i = index">

@@ -7,16 +7,25 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class WorkareaCanvasComponent implements OnInit {
 
-  @ViewChild('workarea') workarea:ElementRef;
+  @ViewChild('workarea') workarea: ElementRef;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  onResizeWorkarea(width:String){
-    console.log("called")
-    this.workarea.nativeElement.style.marginRight=width
+  onResizeRightpane(width: String) {
+    this.workarea.nativeElement.style.marginRight = width
+  }
+
+  onResizeleftpane(width: string) {
+    console.log("width:",width)
+    if(parseInt(width)>500){
+      this.workarea.nativeElement.style.marginLeft = '510px' 
+    }
+    else{
+      this.workarea.nativeElement.style.marginLeft =width
+    }
   }
 
 }

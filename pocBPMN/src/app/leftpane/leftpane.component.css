@@ -7,8 +7,16 @@
 #leftpaneAccordian {
     height: 100vh;
     background-color: rgba(212, 216, 224, 0.664);
-    max-width: 600px;
-    position: relative;
+    max-width: 500px;
+    min-width: 150px;
+    position: absolute;
+    width: 200px;
+    resize: horizontal;
+    overflow: auto;
+}
+
+#leftpaneAccordian::-webkit-resizer {
+    background-color: red;
 }
 
 .flex-container {
@@ -18,13 +26,6 @@
     border-radius: 0px;
     padding: 6px;
 }
-
-
-/* .flex-container>div {
-color: rgb(12, 12, 12);
-line-height: 2px;
-font-size: 30px;
-} */
 
 .card {
     background-color: Transparent;
@@ -46,4 +47,12 @@ font-size: 30px;
 .btn:focus {
     outline: none;
     box-shadow: none;
+}
+
+.resizeDrawer {
+    background-color: black;
+    height: 100%;
+    float: right;
+    width: 2px;
+    cursor: col-resize;
 }

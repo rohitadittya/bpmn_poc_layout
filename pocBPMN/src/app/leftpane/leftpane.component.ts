@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
 import { LeftpaneService } from '../service/leftpane.service';
 import { LeftpaneHeader } from '../model/leftpaneHeader.model';
+import { WorkareaCanvasComponent } from '../workarea-canvas/workarea-canvas.component';
 
 @Component({
   selector: 'app-leftpane',
@@ -10,6 +11,8 @@ import { LeftpaneHeader } from '../model/leftpaneHeader.model';
 export class LeftpaneComponent implements OnInit {
 
   leftpaneHeader: LeftpaneHeader[];
+  @Input() workarea: WorkareaCanvasComponent
+  @ViewChild('leftpane') leftpane: ElementRef
 
   constructor(private leftpaneService: LeftpaneService) { }
 
@@ -26,6 +29,9 @@ export class LeftpaneComponent implements OnInit {
     }, 3000)
   }
 
+
+
+
   getLeftpaneData() {
     this.leftpaneHeader = this.leftpaneService.getLeftpaneData();
     console.log("leftpaneData:", this.leftpaneHeader)
@@ -35,5 +41,9 @@ export class LeftpaneComponent implements OnInit {
     this.leftpaneService.onToggleHeaders(id);
   }
 
+  onResizeRightpane() {
+    var width = this.leftpane.nativeElement.style.width
+      this.workarea.onResizeleftpane(parseInt(width) + 10 + 'px')
+  }
 
 }
