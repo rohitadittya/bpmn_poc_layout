@@ -18,8 +18,7 @@ export class WorkareaCanvasComponent implements OnInit {
     this.workarea.nativeElement.style.marginRight = width
   }
 
-  onResizeleftpane(width: string) {
-    console.log("width:",width)
+  onResizeleftpane(width: string) { 
     if(parseInt(width)>500){
       this.workarea.nativeElement.style.marginLeft = '510px' 
     }

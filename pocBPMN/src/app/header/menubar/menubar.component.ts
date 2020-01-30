@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LeftpaneService } from 'src/app/service/leftpane.service';
-import { LeftpaneHeader } from 'src/app/model/leftpaneHeader.model';
-
+import { LeftpaneHeader } from 'src/app/model/leftpaneHeader.model';  
 @Component({
   selector: 'app-menubar',
   templateUrl: './menubar.component.html',
@@ -25,8 +24,11 @@ export class MenubarComponent implements OnInit {
     this.leftpaneHeader = this.leftpaneService.getLeftpaneData();
   }
 
-  onToggleLeftHeaders(id){
-    console.log("called",id)
+
+
+  onToggleLeftHeaders(id) {
+    console.log("called", id)
     this.leftpaneService.onToggleHeaders(id);
-  }
+  } 
 }
+

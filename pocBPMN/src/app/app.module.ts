@@ -14,7 +14,7 @@ import { WorkareaCanvasComponent } from './workarea-canvas/workarea-canvas.compo
     LeftpaneComponent,
     MenubarComponent,
     RightpaneComponent,
-    WorkareaCanvasComponent
+    WorkareaCanvasComponent,
   ],
   imports: [
     BrowserModule,

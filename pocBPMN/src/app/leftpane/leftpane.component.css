@@ -49,6 +49,12 @@
     box-shadow: none;
 }
 
+a {
+    color: black;
+    font-weight: bold;
+    font-size: medium;
+}
+
 .resizeDrawer {
     background-color: black;
     height: 100%;

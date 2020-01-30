@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { WorkareaCanvasComponent } from './workarea-canvas/workarea-canvas.component';
+import { Component, OnInit, ViewChild } from '@angular/core'; 
 
 @Component({
   selector: 'app-root',
